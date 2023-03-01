@@ -1,0 +1,107 @@
+
+.services {
+    margin-top: $big-indent;
+    display:flex;
+    flex-direction:column;
+    row-gap: $indent;
+    @media screen and (min-width:767px){
+        flex-direction: row; 
+        column-gap:$big-indent * 2;   
+    }
+    &__descr, &__sign {
+        @media screen and (min-width:767px) {
+            flex-basis: calc(calc(100% - #{$big-indent*2}) / 2);
+
+        }
+    }
+    &__sign {
+        img {
+            width: 100%;
+            @media screen and (min-width:767px) {
+                border-radius:$border-radius;
+            }
+        }
+    }
+}
+.show-more-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin-top: 16px;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+          pointer-events: none;
+}
+
+.show-more-button__arrow {
+    width: 24px;
+    height: 24px;
+    fill: $color-decorative;
+}
+
+.show-more-button__checkbox {
+    display: none;
+}
+
+.text-hidden:has(+ .show-more-button__checkbox:checked) {
+    max-height: none;
+}
+.section-about {
+    max-width: 100%;
+    flex-grow: 1;
+    padding-top: $big-indent;
+    &__header {
+        align-items: center;
+        display:flex;
+        justify-content: space-between;
+    }
+}
+.main {
+    display:flex;
+    background: $color-bg;
+}
+.services-menu {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap; 
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+    overflow-x: auto;
+    gap:$indent/2;
+    @media screen and (min-width:1439px) {
+        flex-wrap:wrap;
+    }
+    &__link {
+        display: inline-flex;
+        padding: 8px $indent;
+        flex-wrap: nowrap;
+        border-radius: $border-radius;
+        white-space: nowrap;
+        text-decoration: none;
+        color: $color-text-secondary;
+        &--active, &:hover {
+        border: 1px solid $color-decorative;  
+        } 
+    }
+} 
+.header-button-block {
+    display:none;
+    column-gap:$indent*2;
+    @media screen and (min-width:1439px) {
+        display:flex;
+    }
+    &__item {
+        display:flex;
+        align-items: center;
+    }
+    &__button {
+        margin-left:$indent/2;
+    }
+    &__text {
+        line-height: 24px;
+        letter-spacing: -0.2px;   
+    }
+}

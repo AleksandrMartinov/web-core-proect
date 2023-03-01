@@ -1,0 +1,15 @@
+@mixin decorativeItem (
+    $height, $left
+) {
+  position: relative;   
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -$left;
+        width: 4px;
+        height: $height;
+        background-color: $color-decorative;
+    }
+}

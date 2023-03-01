@@ -1,17 +1,40 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './normalize.scss';
+@import './vars.scss';
+@import './mixins.scss';
+@import './fonts.scss';
+@import './menu.scss';
+@import './text.scss';
+@import './main.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import './burger-menu.scss';
+
+*{
+    box-sizing: border-box;
+}
+.container {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+.wrapper {
+    padding-left: $indent;
+    padding-right: $indent;
+    width: 100%;
+    @media screen and (min-width:1439px) {
+        padding-left:$indent*2;
+        padding-right:$indent*2;
+    }
 }
+
+.main {
+    flex-grow: 1;
+}
+
+
+
+
+.hidden-320 {
+    display: none;
+}
+

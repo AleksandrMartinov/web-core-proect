@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -9,14 +10,26 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "ignorePatterns": ["node_modules", "dist", "build"],
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "build"
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["prettier", "import"],
+  "plugins": [
+    "prettier",
+    "import"
+  ],
   "rules": {
-    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "import/no-unresolved": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
     "import/order": [
       2,
       {
@@ -31,17 +44,34 @@
         "newlines-between": "always"
       }
     ],
-    "indent": ["error", 2],
-    "linebreak-style": [0, "windows"],
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      0,
+      "windows"
+    ],
     "prettier/prettier": "error",
-    "quotes": ["error", "single"],
-    "semi": ["error", "never"]
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "extensions": [
+          ".js"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
       }
     }
   }

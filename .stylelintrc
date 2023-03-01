@@ -1,0 +1,35 @@
+{
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "selector-type-case": "lower",
+        "selector-max-compound-selectors": 6,
+        "color-hex-length": "short",
+        "selector-attribute-quotes": "always",
+        "function-url-quotes": "always",
+        "comment-empty-line-before": "always",
+        "selector-pseudo-element-colon-notation": "double",
+        "no-duplicate-selectors": true,
+        "shorthand-property-no-redundant-values": true,
+        "max-nesting-depth": 8,
+        "declaration-block-no-shorthand-property-overrides": true,
+        "declaration-block-no-duplicate-properties": [
+            true,
+            {
+                "ignore": [
+                    "consecutive-duplicates"
+                ]
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.scss",
+                "**/*.scss"
+            ],
+            "customSyntax": "postcss-scss"
+        }
+    ]
+}
